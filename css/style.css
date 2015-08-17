@@ -1,0 +1,162 @@
+html,body{
+	padding: 0;
+	margin: 0;
+	font-family: Arial,sans-serif;	
+	height:100%;
+}
+.flex-container{
+	text-align: left;
+	height:100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+.flex-container .flex-item{
+	width: 400px;;
+}
+a.hiddenanchor{
+	display: none;
+}
+.flex-item a{
+	color: #5DA654;
+	text-decoration: none;
+}
+
+.flex-item p{
+	margin: 0px;
+}
+
+::-webkit-input-placeholder{
+	color: #A9A9A9; 
+	font-weight:bold;
+	font-size:16px;
+	line-height:16px;
+}
+::-moz-placeholder{ 
+	color: #A9A9A9; 
+	font-weight:bold;
+	font-size:16px;
+	line-height:16px;
+} 
+
+ input:active,input:focus{
+	outline:none;
+}
+:invalid {
+box-shadow: none;
+}
+.flex-item *{
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+.flex-item .form-header{
+	width:100%;
+	padding: 15px 20px;
+	border-bottom: 1px solid #E9E9E9;
+	font-size:20px;
+	position:relative;
+}
+.flex-item .form-body{
+	width:100%;
+	padding: 0 20px 20px 20px;
+	position:relative;
+}
+.form-body__text{
+	font-size:15px;
+	margin-top:20px;
+	line-height:20px;
+}
+.to_forgot,.to_register,.to_login{
+	position:absolute;
+	right:20px; 
+	bottom:20px;
+	font-size: 14px;
+	text-align: right;
+}
+.to_register,.to_login{
+	font-size: 15px;
+	bottom:18px;
+}
+.to_forgot{width:100px; bottom:15px;}
+
+.flex-item input[type=submit]::-moz-focus-inner,
+.flex-item input[type=reset]::-moz-focus-inner,
+.flex-item input[type=button]::-moz-focus-inner {
+padding: 0;
+border: none;outline:none;
+} 
+
+.flex-item input[type="text"], .flex-item input[type="password"]{
+	width:100%;
+	margin-top: 20px;
+	font-size: 16px;
+	padding: 10px;
+	line-height: 16px;
+	font-family: Arial,sans-serif;	
+	border: 1px solid #E9E9E9; 
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.flex-item input:active,
+.flex-item input:focus{
+	border: 1px solid #5DA654;
+} 
+
+.flex-item  input.button{
+	margin-top: 20px;
+	cursor: pointer;	
+	background: #5DA654;
+	padding: 6px 25px;
+	font-family: Arial,sans-serif;
+	color: #fff;
+	font-size: 14px;
+	font-weight:bold;	
+	border:1px solid #5DA654;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.flex-item input.button:hover{
+	color: #E9E9E9;
+}
+.flex-item input.button:active,
+.flex-item input.button:focus{
+}
+
+#register,#login,#forgot{
+	margin: 0;
+	border: 1px solid #E9E9E9;	
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+#register,#forgot{	
+	display:none;
+}
+#login{
+	display:block;
+}
+#toregister:target ~ .flex-item #register,
+#toforgot:target ~ .flex-item #forgot,
+#tologin:target ~ .flex-item #login{
+	display:block;
+}
+#toregister:target ~ .flex-item #login,
+#toregister:target ~ .flex-item #forgot,
+#tologin:target ~ .flex-item #register,
+#tologin:target ~ .flex-item #forgot,
+#toforgot:target ~ .flex-item #login,
+#toforgot:target ~ .flex-item #register{
+	display:none;
+}
+1*{outline:1px solid #000}
+
+/** yerk some ugly IE fixes 'cause I know someone will ask "why does it look ugly in IE?", no matter how many warnings I will put in the article */

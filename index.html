@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Формы на HTML5 и CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Формы на HTML5 и CSS3" />
+        <meta name="keywords" content="html5, css3, :target, pseudo-class" />
+        <meta name="author" content="Xenotek" />
+        <link rel="shortcut icon" href="favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div class="flex-container">
+			<a class="hiddenanchor" id="toregister"></a>
+			<a class="hiddenanchor" id="tologin"></a>
+			<a class="hiddenanchor" id="toforgot"></a>
+			<div class="flex-item">
+				<div id="login">
+					<form action="signin.php" autocomplete="on"> 
+						<div class="form-header">
+							Вход <a href="#toregister" class="to_register">Регистрация</a>
+						</div>
+						<div class="form-body">
+							<input name="email" required="required" type="text" placeholder="Электронная почта"/>
+							<input name="password" required="required" type="password" placeholder="Пароль" /> 
+							<a href="#toforgot" class="to_forgot">Забыли пароль?</a>
+
+							<input type="submit" class="button" value="Войти" /> 
+						</div>
+					</form>
+				</div>
+				<div id="register">
+					<form action="signin.php" autocomplete="on"> 
+						<div class="form-header">
+							Регистрация <a href="#tologin" class="to_login">Вход</a>
+						</div>
+						<div class="form-body">
+							<input name="email" required="required" type="text" placeholder="Электронная почта"/>
+							<input name="password" required="required" type="password" placeholder="Придумайте пароль" /> 
+							<input type="submit" class="button" value="Зарегистрироваться" /> 
+						</div>
+					</form>
+				</div>
+				<div id="forgot">
+					<form action="signin.php" autocomplete="on"> 
+						<div class="form-header">
+							Пароль потерялся <a href="#tologin" class="to_login">Вход</a>
+						</div>
+						<div class="form-body">
+							<div class="form-body__text">
+								Мы вышлем письмо для смены пароля вам на электронную почту, указанную при регистрации:
+							</div>
+							<input name="email" required="required" type="text" placeholder="Электронная почта"/>
+							<input type="submit" class="button" value="Отправить" /> 
+						</div>
+					</form>
+				</div>
+				
+			</div>
+        </div>
+    </body>
+</html>
